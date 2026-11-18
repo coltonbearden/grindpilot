@@ -22,8 +22,10 @@ GrindPilot is early (the first of the build stages in [`docs/spec/10-build-stage
 ## What it never does
 
 - It never reads or writes the game's memory, files or process, never sends the game input, and never draws over it.
-  A check in CI fails any build whose code, or whose dependencies, call anything that could open another program
-  ([`docs/build.md`](docs/build.md), "The forbidden-call check").
+  A check in CI fails any build whose own code calls anything that could open another program, and any dependency
+  that makes such a call unless that exact call was read in the dependency's source and recorded as touching only
+  GrindPilot itself (for example, its updater waiting for GrindPilot to exit) ([`docs/build.md`](docs/build.md), "The
+  forbidden-call check").
 - It sends nothing about you anywhere: no telemetry, no account, no sign-in. Its only network traffic is the update
   check against this repo's GitHub releases.
 - Screenshots, recordings and anything read from them stay on your PC.
