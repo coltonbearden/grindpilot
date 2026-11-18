@@ -1,0 +1,12 @@
+{
+  "kind": "calling-card-category",
+  "about": "Calling-card challenge categories at launch [P-PROG]. The in-game calling-card screen also shows categories this list doesn't hold; they join through the review list once confirmed. Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Multiplayer Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Regular", "sources": ["P-PROG"], "quote": "Regular Calling Card Challenges" }] } },
+    { "name": "DMZ Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Regular", "sources": ["P-PROG"], "quote": "Regular Calling Card Challenges" }] } },
+    { "name": "Shared Mode Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Regular", "sources": ["P-PROG"], "quote": "Regular Calling Card Challenges" }] } },
+    { "name": "Elite Multiplayer Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Elite", "sources": ["P-PROG"], "quote": "Elite Calling Card Challenges" }] } },
+    { "name": "Elite DMZ Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Elite", "sources": ["P-PROG"], "quote": "Elite Calling Card Challenges" }] } },
+    { "name": "Elite Campaign Mastery", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Elite", "sources": ["P-PROG"], "quote": "Elite Calling Card Challenges" }] } }
+  ]
+}

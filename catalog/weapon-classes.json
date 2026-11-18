@@ -1,0 +1,67 @@
+{
+  "kind": "weapon-class",
+  "about": "The nine weapon classes [P-LOAD]. 'SMG' and 'Melee' are how P-S1 and the screens write two of them.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Assault Rifle",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Submachine Gun",
+      "sources": [
+        "P-LOAD"
+      ],
+      "shown": [
+        "SMG"
+      ]
+    },
+    {
+      "name": "Shotgun",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Light Machine Gun",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Marksman Rifle",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Sniper Rifle",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Pistol",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Launcher",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Melee Weapon",
+      "sources": [
+        "P-LOAD"
+      ],
+      "shown": [
+        "Melee"
+      ]
+    }
+  ]
+}

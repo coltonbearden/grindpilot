@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The doors: one small class each for every thing that reaches Windows or the network (8.4, 2.4).
+       WinRT types are written global::Windows.… because this project's namespace would shadow them. -->
+  <PropertyGroup>
+    <TargetFramework>$(WindowsTargetFramework)</TargetFramework>
+    <AssemblyName>GrindPilot.Windows</AssemblyName>
+    <RootNamespace>GrindPilot.Windows</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Velopack" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="GrindPilot.Windows.Tests" />
+  </ItemGroup>
+  <!-- The repo whose releases this build updates from (UpdateService.RepoUrl; Directory.Build.props sets the default). -->
+  <ItemGroup>
+    <AssemblyMetadata Include="UpdateRepoUrl" Value="$(UpdateRepoUrl)" />
+  </ItemGroup>
+</Project>

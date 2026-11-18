@@ -1,0 +1,40 @@
+# Captures, and anything cut from them, never enter this repo (CLAUDE.md, "What never goes in this repo").
+# A build stage that needs an image of the app's own (an icon, say) adds a narrow exception for that one folder.
+*.png
+*.jpg
+*.jpeg
+*.jxr
+*.webp
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.avif
+*.heic
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.avi
+
+# Raw text read from a capture can hold other players' names.
+*.ocr.json
+*.ocr.txt
+
+# Throwaway work: trial environments, proof pages, extracted frames.
+.scratch/
+.venv/
+__pycache__/
+
+# Claude Code's per-machine settings, and a maintainer's own instructions and tools (docs/build.md, "Local-only files").
+.claude/settings.local.json
+CLAUDE.local.md
+private/
+
+# Build output.
+bin/
+obj/
+publish/
+Releases/
+TestResults/
+*.user

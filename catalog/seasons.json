@@ -1,0 +1,7 @@
+{
+  "about": "Seasons, so the store keeps player level per season (03-account-state.md, 3.6). Launch is the date of P-LIVE; Season 1 'goes live at 0000 (midnight) ET on November 6' [P-S1]. Dates are the PC's local date.",
+  "seasons": [
+    { "name": "Launch", "starts": "2026-10-23", "sources": ["P-LIVE"], "quote": "Modern Warfare 4 is now live worldwide" },
+    { "name": "Season 1", "starts": "2026-11-06", "sources": ["P-S1"], "quote": "Season 1 goes live at 0000 (midnight) ET on November 6" }
+  ]
+}

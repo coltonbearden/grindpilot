@@ -1,0 +1,8 @@
+{
+  "about": "The Velopack source this repo builds its Windows helpers (setup, update, stub) from, with no-process-scan.patch applied. Velopack's stock helpers open every running process on each install, update and uninstall (src/bins/src/shared/util_windows.rs, lines 46-60 at this commit), which would reach the game. Design decision (2026-11-17): build Velopack's helpers from its MIT source with that scan removed. A new Velopack version is taken only after its source is read again and this file names it (docs/build.md, \"Velopack's helpers\").",
+  "version": "1.2.161",
+  "tag": "1.2.161",
+  "commit": "92d6a1c91716729d449034df5c50307dcce39493",
+  "license": "MIT",
+  "reviewed": "2026-11-17"
+}

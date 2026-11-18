@@ -1,0 +1,151 @@
+{
+  "kind": "tactical",
+  "about": "From P-LOAD's unlock tables, seeded by tools/CatalogSeed.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Flash Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Smoke Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Snapshot Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Concussion Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "15",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Heartbeat Sensor",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "23",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shock Stick",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "29",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Decoy Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "42",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stim",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "47",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Screamer Mine",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "53",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

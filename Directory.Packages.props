@@ -1,0 +1,21 @@
+<Project>
+  <!-- One version per package for the whole solution. Dependabot proposes updates (8.7, .github/dependabot.yml). -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Avalonia" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Desktop" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Themes.Fluent" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Fonts.Inter" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Headless" Version="12.1.6" />
+    <PackageVersion Include="Avalonia.Headless.XUnit" Version="12.1.6" />
+    <!-- The release workflow runs vpk at this same version (docs/build.md, "Releases"). -->
+    <PackageVersion Include="Velopack" Version="1.2.161" />
+    <PackageVersion Include="Microsoft.Data.Sqlite" Version="11.0.0" />
+    <!-- Held at 3.x: Avalonia.Headless.XUnit 12.1.6 is built on xunit.v3 3.2.2. Move with it (docs/build.md). -->
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.12.0" />
+  </ItemGroup>
+</Project>

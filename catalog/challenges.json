@@ -1,0 +1,9 @@
+{
+  "kind": "challenge",
+  "about": "Calling-card challenges named in the official posts or on in-game screens confirmed by eye. The rest are harvested in stage 4. Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Victorious!", "sources": ["P-PROG", "S48"], "facts": {
+        "set": [{ "value": "Objective", "sources": ["P-PROG"], "quote": "Victorious! Tiered Challenge of the Objective Mastery Set" }],
+        "tiers": [{ "value": "win 20, 60, 150 and 300 Multiplayer matches", "sources": ["P-PROG"], "quote": "win 20/60/150/300 Multiplayer Matches" }] } }
+  ]
+}

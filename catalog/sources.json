@@ -1,0 +1,57 @@
+{
+  "about": "The official posts the catalog cites (docs/spec/sources.md). url is the post's page as sources.md lists it; feedId is its id in Steam's news API, which differs from the page id. screens are in-game screens a maintainer confirmed by eye, named by the screen they show; no picture is published.",
+  "sources": [
+    {
+      "tag": "P-PROG",
+      "title": "Modern Warfare 4 Progression and Prestige",
+      "date": "2026-10-19",
+      "url": "https://store.steampowered.com/news/app/1938090/view/671757096278033531",
+      "feedId": "1846651706691566"
+    },
+    {
+      "tag": "P-LOAD",
+      "title": "Modern Warfare 4 Operators, Weapons, Equipment, and Multiplayer Loadout Intel",
+      "date": "2026-10-19",
+      "url": "https://store.steampowered.com/news/app/1938090/view/671757096278033470",
+      "feedId": "1846651706691538"
+    },
+    {
+      "tag": "P-S1",
+      "title": "Call of Duty: Modern Warfare 4 and Warzone - Season 1",
+      "date": "2026-10-28",
+      "url": "https://store.steampowered.com/news/app/1938090/view/677387230220656499",
+      "feedId": "1847920302231964"
+    },
+    {
+      "tag": "P-WZ",
+      "title": "Call of Duty: Warzone Season 1: Everything You Need to Know",
+      "date": "2026-11-02",
+      "url": "https://store.steampowered.com/news/app/1938090/view/717920261052041976",
+      "feedId": "1847920302249180"
+    },
+    {
+      "tag": "P-BP",
+      "title": "Modern Warfare 4 Season 1 Battle Pass System, BlackCell, and New Store Bundles",
+      "date": "2026-11-05",
+      "url": "https://store.steampowered.com/news/app/1938090/view/717920898634482445",
+      "feedId": "1848664643342757"
+    },
+    {
+      "tag": "P-LIVE",
+      "title": "Call of Duty: Modern Warfare 4 is Live Worldwide",
+      "date": "2026-10-23",
+      "url": "https://store.steampowered.com/news/app/1938090/view/677387230220654226",
+      "feedId": "1847286114037488"
+    }
+  ],
+  "screens": [
+    { "tag": "S04", "title": "In-game screen: Career › Challenges (dailies, camo and calling-card tiles)" },
+    { "tag": "S05", "title": "In-game screen: Career › Challenges › Camo Challenges › Weapon Mastery" },
+    { "tag": "S19", "title": "In-game screen: Camo Challenges › one weapon's camo page" },
+    { "tag": "S22", "title": "In-game screen: Camo Challenges › one weapon's camo page (challenge in progress)" },
+    { "tag": "S46", "title": "In-game screen: Career › Challenges › Calling Cards (Mastery Sets)" },
+    { "tag": "S48", "title": "In-game screen: Calling Cards › one challenge" },
+    { "tag": "S50", "title": "In-game screen: Gunsmith › Select Muzzle (attachment list)" },
+    { "tag": "S73", "title": "In-game screen: Gunsmith overview (five attachments fitted)" }
+  ]
+}

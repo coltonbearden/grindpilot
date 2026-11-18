@@ -1,0 +1,97 @@
+{
+  "kind": "attachment-slot",
+  "about": "Every attachment type P-LOAD's weapon blocks name.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Ammunition",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Barrel",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Bolt",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Comb",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Cylinder",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Fire Mods",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Guard",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Laser",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Magazine",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Muzzle",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Optic",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Rear Grip",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Stock",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Trigger Action",
+      "sources": [
+        "P-LOAD"
+      ]
+    },
+    {
+      "name": "Underbarrel",
+      "sources": [
+        "P-LOAD"
+      ]
+    }
+  ]
+}

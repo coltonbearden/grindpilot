@@ -1,0 +1,25 @@
+diff --git a/src/bins/src/shared/util_windows.rs b/src/bins/src/shared/util_windows.rs
+--- a/src/bins/src/shared/util_windows.rs
++++ b/src/bins/src/shared/util_windows.rs
+@@ -86,18 +86,9 @@ pub fn force_stop_package<P: AsRef<Path>>(root_dir: P) -> Result<()> {
+
+ fn _force_stop_package<P: AsRef<Path>>(root_dir: P) -> Result<()> {
+     let dir = root_dir.as_ref();
+-    info!("Checking for running processes in: {}", dir.display());
+-    let processes = unsafe { get_processes_running_in_directory(dir)? };
+-    let my_pid = std::process::id();
+-    for (pid, path, handle) in processes.iter() {
+-        if *pid == my_pid {
+-            warn!("Skipping killing self: {} ({})", path.display(), pid);
+-            continue;
+-        }
+-        warn!("Killing process: {} ({})", path.display(), pid);
+-        process::kill_process(handle)?;
+-    }
+-    info!("Force-stop check complete.");
++    // GrindPilot: the scan that opened every running process to find copies of the app is removed, so
++    // installing, updating or uninstalling opens no process but the app's own (a design decision, 2026-11-17).
++    info!("Process scan removed in this build; not checking for running processes in: {}", dir.display());
+     Ok(())
+ }
+ 

@@ -1,0 +1,13 @@
+{
+  "what": "Invented confirmed values for the tests. No screenshot behind them exists; the hashes are made up.",
+  "samples": [
+    { "id": "S01", "file": "Capture 2026.01.02 - 10.00.00.00.png", "screen": "Career › Prestige", "sha256": "0000000000000000000000000000000000000000000000000000000000000001" },
+    { "id": "S02", "file": "Capture 2026.01.02 - 10.05.30.50.png", "screen": "Camo Challenges › one weapon's camo page", "sha256": "0000000000000000000000000000000000000000000000000000000000000002" }
+  ],
+  "fields": [
+    { "n": 1, "sample": "S01", "field": "prestige", "confirmed": "2" },
+    { "n": 2, "sample": "S01", "field": "level", "confirmed": "Level 17" },
+    { "n": 3, "sample": "S02", "field": "camos unlocked", "confirmed": "3/15" },
+    { "n": 4, "sample": "S02", "field": "loadout name", "confirmed": "Invented name" }
+  ]
+}

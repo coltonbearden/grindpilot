@@ -1,0 +1,2616 @@
+{
+  "kind": "weapon",
+  "about": "The 33 launch weapons [P-LOAD] and Season 1's [P-S1], seeded by tools/CatalogSeed from the posts' tables and weapon blocks. Where P-LOAD's unlock table and a weapon's own line disagree, both values are kept: a conflict (3.5).",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Han 86",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "72",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "740 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Han X20 Skybreaker",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "M4",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "14",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "72",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "810 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "M4 Hurricane",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hyeon Burst",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "21",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "68",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "375 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Hyeon Hyperburst",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Patriot XMR",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "27",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "72",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "645 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "25",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "100",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Patriot XMR Volt",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kastov 762",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "34",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "68",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "600 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Kastov ARC",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oden",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "39",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "65",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "413 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Comb, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Oden Sentinel",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Axion",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "52",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "69",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "705 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Axion Reaver",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cronen Squall",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "55",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "67",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "673 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "80",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Cronen Maelstrom",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ISO Nightshade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "64",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "923 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "ISO Trace",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "VEL 46",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "5",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "13",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "952 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "40",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "120",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "VEL 46 Snap",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wz.55 Striga",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "18",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "21",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "651 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "25",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "75",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "WZ.55 Striga Rampage",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "PPSh-41",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "27",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "62",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "1110 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "71",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "71",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Stock, Laser, Fire Mods",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "PPSh-41 Ember",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "X-58 Nyx",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "34",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "53",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "800 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "40",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "120",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "X-58 Void",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rezi 12",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Shotgun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "150 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "24",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Bolt, Muzzle, Guard, Barrel, Underbarrel, Rear Grip, Comb, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Rezi 12 Enforcer",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Warlord",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Shotgun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "32",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "105 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "14",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "42",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Bolt, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Warlord Lumen",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Finn LMG",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Light Machine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "59",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "587 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "100",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "100",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "FiNN Adverse",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Type 73",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Light Machine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "9",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "65",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "821 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Type 73 Assault",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "APOC-338",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Light Machine Gun",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "44",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "56",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "554 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "50",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "100",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "APOC-338 Praetor",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "MAR-9",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Marksman Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "73",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "315 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "60",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Trigger Action, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "MAR-9 Auto",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oris 8.6",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Marksman Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "11",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "70",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "89 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Bolt, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Oris 8.6 Razor",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mosin-Nagant",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Marksman Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "36",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "69",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "44 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "5",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "15",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Bolt, Underbarrel, Magazine, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Mosin Harpoon",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "KG-7 Vulcan",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Sniper Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "75",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "41 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Bolt, Underbarrel, Magazine, Comb, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "KG-7 Drillcharge",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Astaroth .57",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Sniper Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "25",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "54",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "34 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "9",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Astaroth .57 Infiltrator",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Signal 50",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Sniper Rifle",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "50",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "35",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the weapon's own line"
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "74",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "111 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "7",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "21",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Signal Inferno",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SANG 9mm",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Pistol",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "38",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "370 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "13",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "39",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Magazine, Rear Grip, Trigger Action, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "SANG Breach",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Krait P68",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Pistol",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "7",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "38",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "40",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Trigger Action, Magazine, Rear Grip, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Krait P68 Commando",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": ".50 GS",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Pistol",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "41",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "37",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "166 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "7",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "21",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Trigger Action, Underbarrel, Magazine, Rear Grip, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "GS Magna",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mojave .357",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Pistol",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "48",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "44",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "141 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "32",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Cylinder, Muzzle, Barrel, Trigger Action, Rear Grip, Laser, Ammunition",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Mojave Lawless",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "PILA",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Launcher",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "8 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "RPG-8",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Launcher",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "23",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "20 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "JOKR",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Launcher",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "43",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "13 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "PM-40 Anvil",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Launcher",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "54",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "38 RPM",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "N/A",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "FSS Carbon Edge 1095 Knife",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Melee Weapon",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "46",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      },
+      "shown": [
+        "FSS Carbon Edge 1095"
+      ]
+    },
+    {
+      "name": "Cronen Osprey",
+      "sources": [
+        "P-S1"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Assault Rifle",
+            "sources": [
+              "P-S1"
+            ],
+            "quote": "Assault Rifle, Battle Pass Tier 16, Tier 87 Battle Pass Blueprint"
+          }
+        ],
+        "unlock": [
+          {
+            "value": "Battle Pass Tier 16, Tier 87 Battle Pass Blueprint",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "season": [
+          {
+            "value": "Season 1",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "70",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "882 RPM",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "30",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "90",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "Cronen Helix Mk. II",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "CSG-35",
+      "sources": [
+        "P-S1"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Submachine Gun",
+            "sources": [
+              "P-S1"
+            ],
+            "quote": "SMG, Battle Pass Tier 36, Tier 73 Battle Pass Blueprint"
+          }
+        ],
+        "unlock": [
+          {
+            "value": "Battle Pass Tier 36, Tier 73 Battle Pass Blueprint",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "season": [
+          {
+            "value": "Season 1",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "42",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "1200 RPM",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "28",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "112",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Underbarrel, Magazine, Rear Grip, Stock, Laser, Ammunition",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "CSG Crossfire",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "JAK 12",
+      "sources": [
+        "P-S1"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Shotgun",
+            "sources": [
+              "P-S1"
+            ],
+            "quote": "Shotgun, Event Reward"
+          }
+        ],
+        "unlock": [
+          {
+            "value": "Event Reward",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "season": [
+          {
+            "value": "Season 1",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "not stated",
+            "sources": [
+              "P-S1"
+            ],
+            "note": "the post shows [CLASSIFIED]",
+            "quote": "Levels: [CLASSIFIED]"
+          }
+        ],
+        "fireRate": [
+          {
+            "value": "323 RPM",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "rounds": [
+          {
+            "value": "8",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "reserve": [
+          {
+            "value": "16",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "attachmentTypes": [
+          {
+            "value": "Optic, Muzzle, Barrel, Underbarrel, Magazine, Rear Grip, Stock, Laser",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "apex": [
+          {
+            "value": "JAK Barrage",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZLR Talonhawk",
+      "sources": [
+        "P-S1"
+      ],
+      "facts": {
+        "class": [
+          {
+            "value": "Melee Weapon",
+            "sources": [
+              "P-S1"
+            ],
+            "quote": "Melee, Event Reward"
+          }
+        ],
+        "unlock": [
+          {
+            "value": "Event Reward",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "season": [
+          {
+            "value": "Season 1",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ],
+        "maxLevel": [
+          {
+            "value": "10",
+            "sources": [
+              "P-S1"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

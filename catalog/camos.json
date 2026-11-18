@@ -1,0 +1,66 @@
+{
+  "kind": "camo",
+  "about": "The camo ladder for one weapon and the Mode Mastery camos [P-PROG]. A weapon's three Special camos are its own and are harvested from in-game screens in stage 3. Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Military Camo 1", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "1", "sources": ["P-PROG"] }], "opens": [{ "value": "at a weapon level milestone that differs per weapon", "sources": ["P-PROG"], "quote": "unlocked sequentially at escalating Weapon Level milestones" }] } },
+    { "name": "Military Camo 2", "sources": ["P-PROG", "S04"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "2", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 3", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "3", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 4", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "4", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 5", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "5", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 6", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "6", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 7", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "7", "sources": ["P-PROG"] }] } },
+    { "name": "Military Camo 8", "sources": ["P-PROG"], "facts": { "group": [{ "value": "Military", "sources": ["P-PROG"] }], "order": [{ "value": "8", "sources": ["P-PROG"] }] } },
+    { "name": "Gold", "quote": "Gold Completionist Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Completionist", "sources": ["P-PROG"] }], "order": [{ "value": "12", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "after all Military and Special camos", "sources": ["P-PROG"], "quote": "Complete all Military and Special Camo Challenges to unlock" }],
+        "challenge": [{ "value": "15 eliminations in a single Multiplayer match, or 100 in a DMZ match", "sources": ["P-PROG"], "quote": "Execute 15 eliminations in a single Multiplayer match" }] } },
+    { "name": "Platinum", "quote": "Platinum Completionist Camo", "sources": ["P-PROG", "S05", "S22"], "facts": {
+        "group": [{ "value": "Completionist", "sources": ["P-PROG"] }], "order": [{ "value": "13", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "after Gold on every weapon in the class", "sources": ["P-PROG"], "quote": "Gold Camo Challenges in the same weapon class" }],
+        "challenge": [{ "value": "depends on the class: headshots for assault rifles (Multiplayer: Get 50 Headshots against Players)", "sources": ["P-PROG"], "quote": "Get 50 Headshots against Players" }] } },
+    { "name": "Harmonic Break", "quote": "Harmonic Break Completionist Camo", "sources": ["P-PROG", "S19"], "facts": {
+        "group": [{ "value": "Completionist", "sources": ["P-PROG"] }], "order": [{ "value": "14", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "after Platinum on 33 weapons", "sources": ["P-PROG"], "quote": "complete all Platinum Camo Challenges for 33 weapons" }] } },
+    { "name": "Divergence", "quote": "Divergence Completionist Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Completionist", "sources": ["P-PROG"] }], "order": [{ "value": "15", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "awarded for 33 Harmonic Break challenges; opens the Mastery camos", "sources": ["P-PROG"], "quote": "awarded for completing 33 Harmonic Break Challenges" }] } },
+    { "name": "Pyroclast", "quote": "Pyroclast Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Prestige", "sources": ["P-PROG"] }], "order": [{ "value": "16", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "Weapon Prestige 1, Level 1", "sources": ["P-PROG"], "quote": "Reach Weapon Prestige 1 Level 1" }] } },
+    { "name": "Pyroclast Terminus", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Prestige", "sources": ["P-PROG"] }], "order": [{ "value": "17", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "Weapon Prestige 1, Max Level", "sources": ["P-PROG"], "quote": "Reach Weapon Prestige 1 Max Level" }] } },
+    { "name": "Pyroclast Scatter", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Prestige", "sources": ["P-PROG"] }], "order": [{ "value": "18", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "Weapon Prestige Master Level 150", "sources": ["P-PROG"], "quote": "Reach Weapon Prestige Master Level 150" }] } },
+    { "name": "Pyroclast Cascade", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Prestige", "sources": ["P-PROG"] }], "order": [{ "value": "19", "sources": ["P-PROG"] }],
+        "opens": [{ "value": "Weapon Prestige Master Level 250", "sources": ["P-PROG"], "quote": "Reach Weapon Prestige Master Level 250" }] } },
+
+    { "name": "Mercurial Drift", "quote": "Mercurial Drift Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Multiplayer", "sources": ["P-PROG"], "quote": "Multiplayer Mastery Camos" }], "order": [{ "value": "21", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "10 kills in a match, 250 times", "sources": ["P-PROG"], "quote": "Then get 10 Kills in a match 250 times" }] } },
+    { "name": "Polyatomic Reforged", "quote": "Polyatomic Reforged Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Multiplayer", "sources": ["P-PROG"], "quote": "Multiplayer Mastery Camos" }], "order": [{ "value": "22", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "3 kills without taking damage, 300 times", "sources": ["P-PROG"], "quote": "Then get 3 kills without taking Damage 300 times" }] } },
+    { "name": "Orion Reforged", "quote": "Orion Reforged Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Multiplayer", "sources": ["P-PROG"], "quote": "Multiplayer Mastery Camos" }], "order": [{ "value": "23", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "5 kills without dying, 500 times", "sources": ["P-PROG"], "quote": "Then get 5 Kills without dying 500 times" }] } },
+    { "name": "Chiral", "quote": "Chiral Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: DMZ", "sources": ["P-PROG"], "quote": "DMZ Mastery Camos" }], "order": [{ "value": "24", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "2,500 Tier 3+ enemy kills", "sources": ["P-PROG"], "quote": "Then get 2,500 Tier 3+ enemy kills" }] } },
+    { "name": "Ripple Tide", "quote": "Ripple Tide Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: DMZ", "sources": ["P-PROG"], "quote": "DMZ Mastery Camos" }], "order": [{ "value": "25", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "exfil 2 LT dog tags in a single deployment, 50 times", "sources": ["P-PROG"], "quote": "Exfil 2 LT dog tags in a single deployment" }] } },
+    { "name": "Helio", "quote": "Helio Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: DMZ", "sources": ["P-PROG"], "quote": "DMZ Mastery Camos" }], "order": [{ "value": "26", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "25,000 kills using Legendary weapons on a Max Level Operator", "sources": ["P-PROG"], "quote": "Kills using Legendary Weapons on a Max Level Operator" }] } },
+    { "name": "Parallax", "quote": "Parallax Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Warzone", "sources": ["P-PROG"], "quote": "Call of Duty: Warzone Mastery Camos" }], "order": [{ "value": "27", "sources": ["P-PROG"] }],
+        "challenge": [{ "value": "not stated: the post leaves it to Season 1", "sources": ["P-PROG"], "quote": "when the classified info above gets revealed" }] } },
+    { "name": "Damascus Reforged", "quote": "Damascus Reforged Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Warzone", "sources": ["P-PROG"], "quote": "Call of Duty: Warzone Mastery Camos" }], "order": [{ "value": "28", "sources": ["P-PROG"] }] } },
+    { "name": "Empyros", "quote": "Empyros Mastery Camo", "sources": ["P-PROG"], "facts": {
+        "group": [{ "value": "Mode Mastery: Warzone", "sources": ["P-PROG"], "quote": "Call of Duty: Warzone Mastery Camos" }], "order": [{ "value": "29", "sources": ["P-PROG"] }] } }
+  ]
+}

@@ -1,0 +1,9 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="GrindPilot.App.App"
+             RequestedThemeVariant="Default">
+  <!-- Fluent, light or dark following Windows (08-app-shape-and-stack.md, 8.3). -->
+  <Application.Styles>
+    <FluentTheme />
+  </Application.Styles>
+</Application>

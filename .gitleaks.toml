@@ -1,0 +1,15 @@
+# gitleaks' default rules, plus one narrow allowance (docs/build.md, "Secrets").
+title = "grindpilot"
+
+[extend]
+useDefault = true
+
+# The test fixture's import map names account keys such as "weapon.cronen-osprey.camos.unlocked". Long dotted
+# lower-case names after "key" look like API keys to the generic rule. Allowed only in that one file, and only in that
+# exact shape.
+[[allowlists]]
+description = "Account key names in the invented import map, not secrets"
+condition = "AND"
+paths = ['''^tests/fixtures/import-map\.json$''']
+regexTarget = "match"
+regexes = ['''^key": "[a-z0-9.-]+"$''']

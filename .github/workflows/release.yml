@@ -1,0 +1,247 @@
+# A tag v<version> builds GrindPilot's Velopack package and publishes it to this repo's Releases
+# (docs/spec/08-app-shape-and-stack.md, 8.6 and 8.7; docs/build.md, "Releases"). Tags with a hyphen
+# (v0.0.1-pre.1) become pre-releases, which the app's update check ignores.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  # The repo this build updates from (Directory.Build.props, UpdateRepoUrl): the repo the release is made in.
+  UpdateRepoUrl: https://github.com/${{ github.repository }}
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  DOTNET_NOLOGO: "1"
+  NUGET_XMLDOC_MODE: skip
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: pwsh
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Version from the tag
+        id: version
+        run: |
+          $v = "${{ github.ref_name }}".TrimStart('v')
+          if ($v -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z.]+)?$') { throw "The tag ${{ github.ref_name }} isn't v<major>.<minor>.<patch>[-pre]" }
+          "version=$v" >> $env:GITHUB_OUTPUT
+          "prerelease=$(if ($v.Contains('-')) { 'true' } else { 'false' })" >> $env:GITHUB_OUTPUT
+
+      - name: Restore (locked)
+        run: dotnet restore GrindPilot.slnx --locked-mode
+
+      - name: Build
+        run: dotnet build GrindPilot.slnx -c Release --no-restore
+
+      - name: Test
+        run: dotnet test GrindPilot.slnx -c Release --no-build
+
+      - name: Velopack's helpers (cache)
+        id: helpers-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .scratch/velopack/vpk-*
+          key: velopack-helpers-${{ hashFiles('tools/velopack/**', 'Directory.Packages.props') }}
+
+      - name: Velopack's helpers, built with the process scan removed
+        run: |
+          $vpk = ./tools/velopack/build-helpers.ps1 | Select-Object -Last 1
+          "VPK=$vpk" >> $env:GITHUB_ENV
+          "VENDOR=$(Join-Path (Split-Path (Split-Path (Split-Path (Split-Path $vpk)))) 'vendor')" >> $env:GITHUB_ENV
+
+      - name: Velopack's helpers (save the build)
+        if: steps.helpers-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .scratch/velopack/vpk-*
+          key: velopack-helpers-${{ hashFiles('tools/velopack/**', 'Directory.Packages.props') }}
+
+      - name: Publish (self-contained, win-x64)
+        run: dotnet publish src/App/App.csproj -c Release -r win-x64 --self-contained -o publish -p:Version=${{ steps.version.outputs.version }}
+
+      - name: Third-party notices, regenerated for what this release ships
+        run: |
+          ./tools/notices/Write-Notices.ps1 -Publish publish -Out publish/THIRD-PARTY-NOTICES.md
+          New-Item -ItemType Directory -Force Releases | Out-Null
+          Copy-Item publish/THIRD-PARTY-NOTICES.md Releases/THIRD-PARTY-NOTICES.md
+
+      - name: Earlier releases, for delta packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: dotnet $env:VPK download github --repoUrl https://github.com/${{ github.repository }} --token $env:GH_TOKEN --outputDir Releases
+
+      - name: Pack
+        run: >
+          dotnet $env:VPK pack --packId GrindPilot --packVersion ${{ steps.version.outputs.version }} --packDir publish
+          --packTitle GrindPilot --packAuthors coltonbearden --mainExe GrindPilot.exe --runtime win-x64 --noPortable --outputDir Releases
+
+      - name: Forbidden-call check (our code, its dependencies, Velopack's helpers, the package)
+        run: >
+          dotnet tools/ForbiddenCalls/bin/Release/net10.0/ForbiddenCalls.dll --config tools/ForbiddenCalls
+          --own src --own publish --runtime publish/GrindPilot.deps.json
+          --deps publish
+          --deps "$env:VENDOR/update_x64.exe" --deps "$env:VENDOR/setup_x64.exe" --deps "$env:VENDOR/stub_x64.exe"
+          --deps (Get-ChildItem "Releases/*-${{ steps.version.outputs.version }}-full.nupkg").FullName
+          --deps (Get-ChildItem Releases/*-Setup.exe).FullName
+
+      - name: Install, then uninstall, on this runner (before anything is uploaded)
+        run: |
+          $setup = (Get-ChildItem Releases/*-Setup.exe).FullName
+          $p = Start-Process -FilePath $setup -ArgumentList '--silent' -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "Setup exited $($p.ExitCode)" }
+          $root = Join-Path $env:LOCALAPPDATA 'GrindPilot'
+          if (-not (Test-Path (Join-Path $root 'current\GrindPilot.exe'))) { throw 'GrindPilot.exe is not in %LOCALAPPDATA%\GrindPilot\current' }
+          [xml]$sq = Get-Content (Join-Path $root 'current\sq.version')
+          if ($sq.package.metadata.version -ne '${{ steps.version.outputs.version }}') { throw "sq.version reads $($sq.package.metadata.version)" }
+          if (-not (Test-Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\GrindPilot')) { throw 'No per-user uninstall entry' }
+          $running = Get-Process -Name GrindPilot -ErrorAction SilentlyContinue
+          if ($running) { Write-Host 'A silent install started GrindPilot; stopping it.'; $running | Stop-Process -Force }
+          Write-Host "Installed $($sq.package.metadata.version) per user in $root, uninstall entry under HKCU."
+
+          # A real start of the installed app, window and all, with a scratch data folder: it must stay up, load the
+          # catalog, start with an empty account and log no error.
+          $env:GRINDPILOT_DATA = Join-Path $env:RUNNER_TEMP 'smoke-data'
+          $app = Start-Process -FilePath (Join-Path $root 'current\GrindPilot.exe') -PassThru
+          Start-Sleep -Seconds 20
+          $app.Refresh()
+          if ($app.HasExited) { throw "GrindPilot exited on its own (code $($app.ExitCode))" }
+          $log = Get-Content (Join-Path $env:GRINDPILOT_DATA 'logs\*.log') -Raw
+          Write-Host $log
+          if ($log -notmatch 'catalog: \d+ entries') { throw 'The catalog did not load' }
+          if ($log -notmatch 'account: empty \(no observations yet\)') { throw 'A new install did not start with an empty account' }
+          if ($log -match ' ERROR ') { throw 'The app logged an error' }
+          Stop-Process -Id $app.Id -Force
+          Remove-Item Env:\GRINDPILOT_DATA
+          Write-Host 'The installed app started, loaded the catalog and started with an empty account.'
+
+          $data = Join-Path $env:LOCALAPPDATA 'GrindPilot-data'
+          New-Item -ItemType Directory -Force $data | Out-Null
+          Set-Content (Join-Path $data 'marker.txt') 'the data folder must survive an uninstall'
+          $u = Start-Process -FilePath (Join-Path $root 'Update.exe') -ArgumentList '--silent', 'uninstall' -Wait -PassThru
+          Write-Host "Update.exe uninstall exited $($u.ExitCode)"
+          for ($i = 0; $i -lt 30 -and (Test-Path $root); $i++) { Start-Sleep -Seconds 1 }
+          if (Test-Path $root) { throw "%LOCALAPPDATA%\GrindPilot is still there after uninstall" }
+          if (-not (Test-Path (Join-Path $data 'marker.txt'))) { throw 'The uninstall touched %LOCALAPPDATA%\GrindPilot-data' }
+          Write-Host 'Uninstalled: the program folder is gone and %LOCALAPPDATA%\GrindPilot-data is untouched.'
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: releases
+          path: Releases/*
+          retention-days: 3
+
+  publish:
+    needs: build
+    runs-on: windows-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: "10.0.x"
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: releases
+          path: Releases
+
+      - name: vpk (the same copy, from the cache)
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .scratch/velopack/vpk-*
+          key: velopack-helpers-${{ hashFiles('tools/velopack/**', 'Directory.Packages.props') }}
+
+      - name: Upload to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $vpk = ./tools/velopack/build-helpers.ps1 | Select-Object -Last 1
+          $extra = @()
+          if ('${{ needs.build.outputs.prerelease }}' -eq 'true') { $extra += '--pre' }
+          dotnet $vpk upload github --repoUrl https://github.com/${{ github.repository }} --token $env:GH_TOKEN --outputDir Releases `
+            --publish --releaseName "GrindPilot ${{ needs.build.outputs.version }}" --tag ${{ github.ref_name }} @extra
+          # The notices for exactly what this release ships, beside its installer (the package carries them too).
+          gh release upload ${{ github.ref_name }} Releases/THIRD-PARTY-NOTICES.md LICENSE --repo ${{ github.repository }} --clobber
+
+  check-update-path:
+    needs: [build, publish]
+    runs-on: windows-latest
+    timeout-minutes: 20
+    # Read-only. A public repo's releases are read with no token, as every install reads them; a private repo's (a
+    # fork's) with this job's read-only token, the closest stand-in for a fine-grained token with Contents: read.
+    permissions:
+      contents: read
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GRINDPILOT_RELEASES_TOKEN: ${{ github.event.repository.private && github.token || '' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Read the releases and download the newest package, as an install does
+        run: |
+          dotnet restore src/Jobs/Jobs.csproj --locked-mode
+          $extra = @()
+          if ('${{ needs.build.outputs.prerelease }}' -eq 'true') { $extra += '--prerelease' }
+          dotnet run --project src/Jobs/Jobs.csproj -c Release --no-restore -- check-feed @extra
+
+      - name: The previous release installs, picks this one up, and applies it on its next start
+        if: needs.build.outputs.prerelease == 'false'
+        run: |
+          $this = '${{ needs.build.outputs.version }}'
+          $previous = gh release list --repo ${{ github.repository }} --exclude-pre-releases --json tagName --jq '.[].tagName' |
+            Where-Object { $_ -ne '${{ github.ref_name }}' } | Select-Object -First 1
+          if (-not $previous) { Write-Host 'No earlier release: nothing to update from.'; exit 0 }
+          $dir = Join-Path $env:RUNNER_TEMP 'previous'
+          gh release download $previous --repo ${{ github.repository }} --pattern '*-Setup.exe' --dir $dir
+          $setup = (Get-ChildItem "$dir/*-Setup.exe").FullName
+          Start-Process -FilePath $setup -ArgumentList '--silent' -Wait
+          $root = Join-Path $env:LOCALAPPDATA 'GrindPilot'
+          $exe = Join-Path $root 'current\GrindPilot.exe'
+          [xml]$sq = Get-Content (Join-Path $root 'current\sq.version'); Write-Host "Installed $previous ($($sq.package.metadata.version))"
+
+          $env:GRINDPILOT_DATA = Join-Path $env:RUNNER_TEMP 'data'
+          Start-Process -FilePath $exe -ArgumentList '--update-check' -Wait
+          Write-Host "First start: $(Get-Content (Join-Path $env:GRINDPILOT_DATA 'update-check.txt') -Raw)"
+          Start-Process -FilePath $exe -ArgumentList '--update-check' -Wait
+          for ($i = 0; $i -lt 120; $i++) {
+            [xml]$sq = Get-Content (Join-Path $root 'current\sq.version') -ErrorAction SilentlyContinue
+            if ($sq -and $sq.package.metadata.version -eq $this) { break }
+            Start-Sleep -Seconds 1
+          }
+          if ($sq.package.metadata.version -ne $this) { throw "After two starts the installed version is $($sq.package.metadata.version), not $this" }
+          Write-Host "Second start applied the update: $previous -> $this."
+          Get-Content (Join-Path $env:GRINDPILOT_DATA 'logs\*.log') | Select-String 'update' | ForEach-Object { $_.Line }

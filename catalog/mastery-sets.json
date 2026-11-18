@@ -1,0 +1,33 @@
+{
+  "kind": "mastery-set",
+  "about": "Calling-card Mastery Sets by category, as P-PROG lists them at launch. The screen writes a set's name with 'Mastery' after it ('CAPTURE ZONE MASTERY' [S46]); 'shown' holds that spelling where a screen has confirmed it. Two categories have a set called Combat, so their slugs say which. Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Objective", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "War", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "Capture Zone", "shown": ["Capture Zone Mastery"], "sources": ["P-PROG", "S46"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "Bomb", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "Cash", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "Dog Tag", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Objective, War, Capture Zone, Bomb, Cash, Dog Tag" }] } },
+    { "name": "Combat", "slug": "dmz-combat", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "Mission", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "Exfil", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "Loot", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "Exploration", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "FOB", "sources": ["P-PROG"], "facts": { "category": [{ "value": "DMZ Mastery", "sources": ["P-PROG"], "quote": "Combat, Mission, Exfil, Loot, Exploration, FOB" }] } },
+    { "name": "Combat", "slug": "shared-combat", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Shared Mode Mastery", "sources": ["P-PROG"], "quote": "Combat, Loadout, Collection, Mobility Course" }] } },
+    { "name": "Loadout", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Shared Mode Mastery", "sources": ["P-PROG"], "quote": "Combat, Loadout, Collection, Mobility Course" }] } },
+    { "name": "Collection", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Shared Mode Mastery", "sources": ["P-PROG"], "quote": "Combat, Loadout, Collection, Mobility Course" }] } },
+    { "name": "Mobility Course", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Shared Mode Mastery", "sources": ["P-PROG"], "quote": "Combat, Loadout, Collection, Mobility Course" }] } },
+    { "name": "Ground Zero", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Ground Zero, Winner, Melee, Executions" }] } },
+    { "name": "Winner", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Ground Zero, Winner, Melee, Executions" }] } },
+    { "name": "Melee", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Ground Zero, Winner, Melee, Executions" }] } },
+    { "name": "Executions", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Multiplayer Mastery", "sources": ["P-PROG"], "quote": "Ground Zero, Winner, Melee, Executions" }] } },
+    { "name": "Final Showdown", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite DMZ Mastery", "sources": ["P-PROG"], "quote": "Final Showdown, High-Value Escort, King Slayer, Exterminator" }] } },
+    { "name": "High-Value Escort", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite DMZ Mastery", "sources": ["P-PROG"], "quote": "Final Showdown, High-Value Escort, King Slayer, Exterminator" }] } },
+    { "name": "King Slayer", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite DMZ Mastery", "sources": ["P-PROG"], "quote": "Final Showdown, High-Value Escort, King Slayer, Exterminator" }] } },
+    { "name": "Exterminator", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite DMZ Mastery", "sources": ["P-PROG"], "quote": "Final Showdown, High-Value Escort, King Slayer, Exterminator" }] } },
+    { "name": "Veteran Completer", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Campaign Mastery", "sources": ["P-PROG"], "quote": "Veteran Completer, Realism Completer, YOLO Completer" }] } },
+    { "name": "Realism Completer", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Campaign Mastery", "sources": ["P-PROG"], "quote": "Veteran Completer, Realism Completer, YOLO Completer" }] } },
+    { "name": "YOLO Completer", "sources": ["P-PROG"], "facts": { "category": [{ "value": "Elite Campaign Mastery", "sources": ["P-PROG"], "quote": "Veteran Completer, Realism Completer, YOLO Completer" }] } }
+  ]
+}

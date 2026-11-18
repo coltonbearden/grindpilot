@@ -1,0 +1,27 @@
+<Project>
+  <!-- Shared by every project. See docs/build.md. -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <!-- Restores repeat: every project keeps a packages.lock.json, and CI restores in locked mode (8.7). -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Product>GrindPilot</Product>
+    <Company>coltonbearden</Company>
+    <Authors>coltonbearden</Authors>
+    <Copyright>Copyright (c) 2026 coltonbearden. MIT License. Unofficial; not affiliated with or endorsed by Activision.</Copyright>
+    <Version Condition="'$(Version)' == ''">0.0.0-dev</Version>
+    <!-- The repo whose GitHub releases the app updates from. The release workflow sets it to the repo it runs in
+         (an environment variable of the same name), so a fork's builds update from the fork. -->
+    <UpdateRepoUrl Condition="'$(UpdateRepoUrl)' == ''">https://github.com/coltonbearden/grindpilot</UpdateRepoUrl>
+    <!-- The Windows target every project that reaches Windows uses (8.2). -->
+    <WindowsTargetFramework>net10.0-windows10.0.26100.0</WindowsTargetFramework>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+</Project>

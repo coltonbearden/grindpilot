@@ -1,0 +1,16 @@
+{
+  "kind": "rule",
+  "about": "Progression rules the posts state, kept as facts so the browser can show them, with their conflicts (03-account-state.md, 3.5). Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Player levels", "quote": "Expect one or more unlocks every time you level up, from Level 1-55", "sources": ["P-PROG"], "facts": {
+        "levels": [{ "value": "1 to 55", "sources": ["P-PROG"], "quote": "from Level 1-55" }] } },
+    { "name": "Prestige", "quote": "offers 10 levels of Prestige and 1,000 Prestige Master levels", "sources": ["P-PROG"], "facts": {
+        "levels": [{ "value": "10 Prestiges, then 1,000 Prestige Master levels", "sources": ["P-PROG"], "quote": "offers 10 levels of Prestige and 1,000 Prestige Master levels" }],
+        "classicTrack": [{ "value": "resets level unlocks and Create-a-Class progress for a 20% XP boost and one Permanent Unlock Token", "sources": ["P-PROG"], "quote": "a 20% XP boost, one Permanent Unlock Token" }] } },
+    { "name": "Weapon Prestige level reset", "quote": "Weapon Prestige", "sources": ["P-PROG", "P-LOAD"], "facts": {
+        "resetsTo": [
+          { "value": "level 1", "sources": ["P-PROG"], "note": "Progression and Prestige post", "quote": "Reset your Weapon Level back to 1" },
+          { "value": "zero", "sources": ["P-LOAD"], "note": "Loadout post", "quote": "reset your weapon level back to zero" }
+        ] } }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "kind": "killstreak",
+  "about": "From P-LOAD's unlock tables, seeded by tools/CatalogSeed.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "UAV",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bomb Glider",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Care Package",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "9",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Impact Warhead",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "12",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Artillery Beacon",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Crossfire",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Combat Drone",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "26",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Counter UAV",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "31",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wheelson",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "16",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Missile Salvo",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "24",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Railgun Sentry",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "38",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Attack Helicopter",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Deathstalker",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "35",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Advanced UAV",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "40",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Argonaut",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "45",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "10",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gunship",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "51",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "12",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Air Lockdown",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "55",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "kills": [
+          {
+            "value": "12",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

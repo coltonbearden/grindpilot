@@ -1,0 +1,99 @@
+# Every push and pull request: build, tests (unit, headless window), Velopack's helpers built with the process scan
+# removed, a pack with no upload, the forbidden-call check over the app, the helpers and the package, and gitleaks
+# (docs/spec/08-app-shape-and-stack.md, 8.7; docs/build.md). The local suite (tests/Local) runs on a maintainer's PC only.
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  # The repo this build's update check reads (Directory.Build.props, UpdateRepoUrl): the repo CI runs in.
+  UpdateRepoUrl: https://github.com/${{ github.repository }}
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+      DOTNET_NOLOGO: "1"
+      NUGET_XMLDOC_MODE: skip
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore (locked)
+        run: dotnet restore GrindPilot.slnx --locked-mode
+
+      - name: Build
+        run: dotnet build GrindPilot.slnx -c Release --no-restore
+
+      - name: Test
+        run: dotnet test GrindPilot.slnx -c Release --no-build
+
+      - name: Velopack's helpers (cache)
+        id: helpers-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .scratch/velopack/vpk-*
+          key: velopack-helpers-${{ hashFiles('tools/velopack/**', 'Directory.Packages.props') }}
+
+      - name: Velopack's helpers, built with the process scan removed
+        run: |
+          $vpk = ./tools/velopack/build-helpers.ps1 | Select-Object -Last 1
+          "VPK=$vpk" >> $env:GITHUB_ENV
+          "VENDOR=$(Join-Path (Split-Path (Split-Path (Split-Path (Split-Path $vpk)))) 'vendor')" >> $env:GITHUB_ENV
+
+      - name: Velopack's helpers (save the build)
+        if: steps.helpers-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .scratch/velopack/vpk-*
+          key: velopack-helpers-${{ hashFiles('tools/velopack/**', 'Directory.Packages.props') }}
+
+      - name: Publish (self-contained, win-x64)
+        run: dotnet publish src/App/App.csproj -c Release -r win-x64 --self-contained -o publish -p:Version=0.0.1-ci.${{ github.run_number }}
+
+      - name: Pack (no upload)
+        run: >
+          dotnet $env:VPK pack --packId GrindPilot --packVersion 0.0.1-ci.${{ github.run_number }} --packDir publish
+          --packTitle GrindPilot --packAuthors coltonbearden --mainExe GrindPilot.exe --runtime win-x64 --noPortable --outputDir Releases
+
+      - name: Forbidden-call check (our code, its dependencies, Velopack's helpers, the package)
+        run: >
+          dotnet tools/ForbiddenCalls/bin/Release/net10.0/ForbiddenCalls.dll --config tools/ForbiddenCalls
+          --own src --own publish --runtime publish/GrindPilot.deps.json
+          --deps publish
+          --deps "$env:VENDOR/update_x64.exe" --deps "$env:VENDOR/setup_x64.exe" --deps "$env:VENDOR/stub_x64.exe"
+          --deps (Get-ChildItem Releases/*-full.nupkg).FullName
+          --deps (Get-ChildItem Releases/*-Setup.exe).FullName
+
+      - name: Third-party notices (regenerated; a difference from the committed copy is a warning)
+        run: |
+          New-Item -ItemType Directory -Force .scratch | Out-Null
+          ./tools/notices/Write-Notices.ps1 -Publish publish -Out .scratch/THIRD-PARTY-NOTICES.md
+          if ((Get-FileHash .scratch/THIRD-PARTY-NOTICES.md).Hash -ne (Get-FileHash THIRD-PARTY-NOTICES.md).Hash) {
+            Write-Host '::warning file=THIRD-PARTY-NOTICES.md::The committed notices differ from what this build ships; regenerate them (docs/build.md, "Third-party notices").'
+          }
+
+      - name: Secrets (gitleaks, whole history)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./tools/ci/gitleaks.ps1

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The forbidden-call check CI runs on every push (02-rules-and-limits.md, 2.4). Never shipped. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ForbiddenCalls</AssemblyName>
+    <RootNamespace>GrindPilot.Tools.ForbiddenCalls</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="ForbiddenCalls.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forbidden.json;allowed.json;dependency-review.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

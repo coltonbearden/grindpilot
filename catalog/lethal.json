@@ -1,0 +1,191 @@
+{
+  "kind": "lethal",
+  "about": "From P-LOAD's unlock tables, seeded by tools/CatalogSeed.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Frag Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sticky Grenade",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drill Charge",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "7",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Proximity Mine",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "13",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zip Gun",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "17",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trip Wire",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "22",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thermite",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "26",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Molotov Cocktail",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "28",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Claymore",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "37",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "C4",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "43",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Throwing Knife",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "49",
+            "sources": [
+              "P-LOAD"
+            ],
+            "note": "the unlock table"
+          },
+          {
+            "value": "48",
+            "sources": [
+              "P-PROG"
+            ],
+            "note": "the Permanent Unlock example"
+          }
+        ]
+      }
+    }
+  ]
+}

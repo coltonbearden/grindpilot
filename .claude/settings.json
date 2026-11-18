@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(//**/*.png)",
+      "Read(//**/*.jpg)",
+      "Read(//**/*.jpeg)",
+      "Read(//**/*.jxr)",
+      "Read(//**/*.webp)",
+      "Read(//**/*.bmp)",
+      "Read(//**/*.gif)",
+      "Read(//**/*.tif)",
+      "Read(//**/*.tiff)",
+      "Read(//**/*.avif)",
+      "Read(//**/*.heic)",
+      "Read(//**/*.mp4)",
+      "Read(//**/*.mkv)",
+      "Read(//**/*.mov)",
+      "Read(//**/*.webm)",
+      "Read(//**/*.avi)"
+    ]
+  }
+}

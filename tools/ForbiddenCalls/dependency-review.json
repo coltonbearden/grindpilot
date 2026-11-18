@@ -1,0 +1,71 @@
+{
+  // Forbidden references found in dependencies, each reviewed with its reason. A new one fails the check until it is
+  // reviewed here. Matching is by file name and symbol, not version. Reviewed 2026-11-17 against Avalonia 12.1.6,
+  // Velopack 1.2.161, SkiaSharp and SQLite as Directory.Packages.props pins them.
+  //
+  // Left out of the scan: the .NET runtime's own files (the runtime pack listed in the app's deps.json, and the
+  // apphost). They are Microsoft's platform, the same on every .NET app, not a package this repo chose; the
+  // forbidden-call rule is about what this app's own code and its chosen packages call.
+  //
+  // Native libraries that import TerminateProcess but not OpenProcess or DuplicateHandle can't get a handle to another
+  // program's process, so they can end only a process they already hold: their own.
+  "reviewed": [
+    { "file": "Avalonia.Win32.dll", "symbol": "user32.dll!SetForegroundWindow", "reason": "Brings GrindPilot's own window to the front (WindowImpl.cs, SetForegroundWindow(_hwnd)); the app does that only when the user opens it from the tray or starts it again." },
+    { "file": "Avalonia.Win32.dll", "symbol": "user32.dll!SendMessageW", "reason": "Messages to GrindPilot's own window (WindowImpl.cs: WM_SETICON, WM_SYSCOMMAND for dragging, on _hwnd)." },
+    { "file": "Avalonia.Win32.dll", "symbol": "user32.dll!PostMessageW", "reason": "Wakes Avalonia's own dispatcher window (Win32DispatcherImpl.cs)." },
+    { "file": "Avalonia.Win32.dll", "symbol": "kernel32.dll!GetProcAddress", "reason": "Looks up optional Windows functions in system libraries by Windows version." },
+    { "file": "Avalonia.Win32.dll", "symbol": "System.Runtime.InteropServices.Marshal.GetDelegateForFunctionPointer", "reason": "Calls the optional Windows functions it looked up." },
+    { "file": "Avalonia.Native.dll", "symbol": "System.Runtime.InteropServices.NativeLibrary.TryGetExport", "reason": "The macOS backend, not loaded on Windows; resolves its own native library's functions." },
+    { "file": "Avalonia.Native.dll", "symbol": "System.Runtime.InteropServices.Marshal.GetDelegateForFunctionPointer", "reason": "The macOS backend, not loaded on Windows; calls its own native library's functions." },
+    { "file": "Avalonia.OpenGL.dll", "symbol": "System.Runtime.InteropServices.NativeLibrary.TryGetExport", "reason": "Resolves OpenGL functions in the graphics libraries it renders with." },
+    { "file": "SkiaSharp.dll", "symbol": "Kernel32.dll!GetProcAddress", "reason": "Resolves functions in its own native library, libSkiaSharp.dll." },
+    { "file": "libSkiaSharp.dll", "symbol": "KERNEL32.dll!GetProcAddress", "reason": "Skia, the renderer: looks up system functions at run time." },
+    { "file": "libSkiaSharp.dll", "symbol": "KERNEL32.dll!TerminateProcess", "reason": "Imports no OpenProcess or DuplicateHandle, so it can end only its own process." },
+    { "file": "libHarfBuzzSharp.dll", "symbol": "KERNEL32.dll!GetProcAddress", "reason": "HarfBuzz, the text shaper: looks up system functions at run time." },
+    { "file": "libHarfBuzzSharp.dll", "symbol": "KERNEL32.dll!TerminateProcess", "reason": "Imports no OpenProcess or DuplicateHandle, so it can end only its own process." },
+    { "file": "av_libglesv2.dll", "symbol": "KERNEL32.dll!GetProcAddress", "reason": "ANGLE, Avalonia's OpenGL ES layer over Direct3D: looks up graphics functions at run time." },
+    { "file": "av_libglesv2.dll", "symbol": "KERNEL32.dll!TerminateProcess", "reason": "Imports no OpenProcess or DuplicateHandle, so it can end only its own process." },
+    { "file": "e_sqlite3.dll", "symbol": "KERNEL32.dll!GetProcAddress", "reason": "SQLite, the account store's engine: looks up system functions at run time." },
+    { "file": "e_sqlite3.dll", "symbol": "KERNEL32.dll!TerminateProcess", "reason": "Imports no OpenProcess or DuplicateHandle, so it can end only its own process." },
+    { "file": "Velopack.dll", "symbol": "System.Diagnostics.Process.get_MainModule", "reason": "Only on its own process: Process.GetCurrentProcess().MainModule, to find where GrindPilot is installed (Locators/DefaultProcessImpl.cs line 31, Util/IoUtil.cs line 68, at 1.2.161)." },
+    { "file": "Velopack.dll", "symbol": "System.Diagnostics.Process.Kill", "reason": "Only on a child it started itself (Update.exe), after a timeout (UpdateManager.cs line 430, Util/ProcessExtensions.cs line 95, at 1.2.161)." },
+
+    // Velopack's Windows helpers, built from its source at 1.2.161 with the process scan removed
+    // (tools/velopack/no-process-scan.patch; docs/build.md, "Velopack's helpers"). The stock helpers also import
+    // QueryFullProcessImageNameW (and setup imports OpenProcess) for the scan; these don't, and that import is
+    // deliberately not reviewed here, so a stock helper fails this check. Each is listed under its vendor name and the
+    // name it has in the release: update_x64.exe is Squirrel.exe in the package, setup_x64.exe is GrindPilot-win-Setup.exe,
+    // stub_x64.exe is GrindPilot_ExecutionStub.exe. None imports FindWindow, EnumWindows, a hook, input or
+    // SetForegroundWindow (dumpbin, 2026-11-17).
+    { "file": "update_x64.exe", "symbol": "kernel32.dll!OpenProcess", "reason": "Only GrindPilot's own process: --waitPid opens the id the app passes for itself, with SYNCHRONIZE, to wait for it to exit (process_win.rs wait_for_pid_to_exit; UpdateManager.cs line 356); --wait opens its own parent, and the app never passes --wait at 1.2.161." },
+    { "file": "Squirrel.exe", "symbol": "kernel32.dll!OpenProcess", "reason": "Only GrindPilot's own process: --waitPid opens the id the app passes for itself, with SYNCHRONIZE, to wait for it to exit (process_win.rs wait_for_pid_to_exit; UpdateManager.cs line 356); --wait opens its own parent, and the app never passes --wait at 1.2.161." },
+    { "file": "update_x64.exe", "symbol": "ntdll.dll!NtQueryInformationProcess", "reason": "On its own process only, to read its parent's id for --wait (process_win.rs wait_for_parent_to_exit)." },
+    { "file": "Squirrel.exe", "symbol": "ntdll.dll!NtQueryInformationProcess", "reason": "On its own process only, to read its parent's id for --wait (process_win.rs wait_for_parent_to_exit)." },
+    { "file": "update_x64.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "Ends only processes it started itself (a hook that timed out, through its own child handle, windows/util.rs line 51) and the Rust runtime's own exit; its only OpenProcess is on GrindPilot's own process." },
+    { "file": "Squirrel.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "Ends only processes it started itself (a hook that timed out, through its own child handle, windows/util.rs line 51) and the Rust runtime's own exit; its only OpenProcess is on GrindPilot's own process." },
+    { "file": "update_x64.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child processes it starts." },
+    { "file": "Squirrel.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child processes it starts." },
+    { "file": "update_x64.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library and the windows crate looking up optional system functions." },
+    { "file": "Squirrel.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library and the windows crate looking up optional system functions." },
+    { "file": "update_x64.exe", "symbol": "user32.dll!SendMessageW", "reason": "Its own progress and message dialogs; it imports no FindWindow or EnumWindows, so it holds no other program's window." },
+    { "file": "Squirrel.exe", "symbol": "user32.dll!SendMessageW", "reason": "Its own progress and message dialogs; it imports no FindWindow or EnumWindows, so it holds no other program's window." },
+
+    { "file": "setup_x64.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "Imports no OpenProcess, so it holds no handle to another program's process: it can end only processes it started (installer hooks) and itself." },
+    { "file": "GrindPilot-win-Setup.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "Imports no OpenProcess, so it holds no handle to another program's process: it can end only processes it started (installer hooks) and itself." },
+    { "file": "setup_x64.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child processes it starts." },
+    { "file": "GrindPilot-win-Setup.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child processes it starts." },
+    { "file": "setup_x64.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library and the windows crate looking up optional system functions." },
+    { "file": "GrindPilot-win-Setup.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library and the windows crate looking up optional system functions." },
+    { "file": "setup_x64.exe", "symbol": "user32.dll!SendMessageW", "reason": "Its own splash window and dialogs (it creates them with CreateWindowExW); it imports no FindWindow or EnumWindows." },
+    { "file": "GrindPilot-win-Setup.exe", "symbol": "user32.dll!SendMessageW", "reason": "Its own splash window and dialogs (it creates them with CreateWindowExW); it imports no FindWindow or EnumWindows." },
+    { "file": "setup_x64.exe", "symbol": "user32.dll!PostMessageW", "reason": "WM_CLOSE to its own splash window (windows/splash.rs line 575)." },
+    { "file": "GrindPilot-win-Setup.exe", "symbol": "user32.dll!PostMessageW", "reason": "WM_CLOSE to its own splash window (windows/splash.rs line 575)." },
+
+    { "file": "stub_x64.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "The stub only starts Update.exe (stub.rs); it imports no OpenProcess, so it can end only itself or its child." },
+    { "file": "GrindPilot_ExecutionStub.exe", "symbol": "kernel32.dll!TerminateProcess", "reason": "The stub only starts Update.exe (stub.rs); it imports no OpenProcess, so it can end only itself or its child." },
+    { "file": "stub_x64.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child process it starts." },
+    { "file": "GrindPilot_ExecutionStub.exe", "symbol": "kernel32.dll!DuplicateHandle", "reason": "The Rust standard library duplicating its own handles for the child process it starts." },
+    { "file": "stub_x64.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library looking up optional system functions." },
+    { "file": "GrindPilot_ExecutionStub.exe", "symbol": "kernel32.dll!GetProcAddress", "reason": "The Rust standard library looking up optional system functions." }
+  ]
+}

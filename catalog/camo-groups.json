@@ -1,0 +1,10 @@
+{
+  "kind": "camo-group",
+  "about": "The four camo groups of one weapon's ladder [P-PROG], named as the in-game camo page shows them [S19]. Entered by hand; tests/Local checks each against its sources.",
+  "entries": [
+    { "name": "Military", "quote": "Military Camos", "sources": ["P-PROG", "S19"], "facts": { "count": [{ "value": "8", "sources": ["P-PROG"], "quote": "There are eight Military Camos in all" }], "order": [{ "value": "1", "sources": ["P-PROG"] }] } },
+    { "name": "Special", "quote": "Special Camos", "sources": ["P-PROG", "S19"], "facts": { "count": [{ "value": "3", "sources": ["P-PROG"], "quote": "three Special Weapon Camos" }], "order": [{ "value": "2", "sources": ["P-PROG"] }] } },
+    { "name": "Completionist", "quote": "Completionist Camos", "sources": ["P-PROG", "S19"], "facts": { "count": [{ "value": "4", "sources": ["S19"], "quote": "COMPLETIONIST [2/4]" }], "order": [{ "value": "3", "sources": ["P-PROG"] }] } },
+    { "name": "Prestige", "quote": "four Prestige Weapon Camos", "sources": ["P-PROG", "S19"], "facts": { "count": [{ "value": "4", "sources": ["P-PROG"], "quote": "There are four Prestige Weapon Camos" }], "order": [{ "value": "4", "sources": ["P-PROG"] }] } }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "kind": "field-upgrade",
+  "about": "From P-LOAD's unlock tables, seeded by tools/CatalogSeed.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Portable Radar",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "DDOS",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Munitions Box",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "6",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAM Airburst Turret",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Riot Shield",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "11",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trophy System",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "14",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Seeker Drone",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "19",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Inflatable Decoy",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "25",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Smoke Wall",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "29",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Recon Drone",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "33",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Razor Wire Trap",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "41",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tactical Insertion",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "45",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

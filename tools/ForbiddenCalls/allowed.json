@@ -1,0 +1,5 @@
+{
+  // Exceptions in our own code: each names the exact file and call, and why it doesn't touch another program.
+  // Empty: our own code makes no forbidden call.
+  "allowed": []
+}

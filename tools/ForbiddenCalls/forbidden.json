@@ -1,0 +1,29 @@
+{
+  // The Windows calls this app must never make (02-rules-and-limits.md, 2.4): opening another process, reading or
+  // writing its memory, starting a thread in it, installing an input hook, sending input, or taking focus.
+  // A native name also matches with Windows' A/W suffix and as kernel32's K32 alias.
+  // Review this list whenever a dependency is added (docs/build.md, "The forbidden-call check").
+  "nativeEntryPoints": [
+    "OpenProcess", "NtOpenProcess", "ZwOpenProcess", "OpenThread", "DuplicateHandle",
+    "ReadProcessMemory", "WriteProcessMemory", "NtReadVirtualMemory", "NtWriteVirtualMemory", "ZwReadVirtualMemory",
+    "ZwWriteVirtualMemory", "Toolhelp32ReadProcessMemory", "VirtualAllocEx", "VirtualProtectEx", "VirtualQueryEx",
+    "CreateRemoteThread", "CreateRemoteThreadEx", "NtCreateThreadEx", "RtlCreateUserThread", "QueueUserAPC",
+    "SetThreadContext", "SuspendThread", "NtSuspendProcess", "DebugActiveProcess", "MiniDumpWriteDump", "TerminateProcess",
+    "EnumProcessModules", "EnumProcessModulesEx", "Module32First", "Module32Next", "GetModuleFileNameEx",
+    "GetModuleBaseName", "QueryFullProcessImageName", "GetProcessImageFileName", "NtQueryInformationProcess",
+    "SetWindowsHookEx", "SendInput", "keybd_event", "mouse_event", "BlockInput", "AttachThreadInput",
+    "PostMessage", "SendMessage", "SendMessageTimeout", "SendNotifyMessage", "PostThreadMessage",
+    "SetForegroundWindow", "GetProcAddress"
+  ],
+  // Managed members that open another process's handle, or resolve a native call at run time.
+  "managedMembers": {
+    "System.Diagnostics.Process": [
+      "get_MainModule", "get_Modules", "get_Handle", "get_SafeHandle", "get_StartTime", "get_ExitTime",
+      "get_TotalProcessorTime", "get_UserProcessorTime", "get_PrivilegedProcessorTime", "get_PriorityClass",
+      "set_PriorityClass", "get_ProcessorAffinity", "set_ProcessorAffinity", "get_MainWindowHandle", "Kill",
+      "GetProcessById"
+    ],
+    "System.Runtime.InteropServices.NativeLibrary": ["GetExport", "TryGetExport"],
+    "System.Runtime.InteropServices.Marshal": ["GetDelegateForFunctionPointer"]
+  }
+}

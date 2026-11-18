@@ -1,0 +1,12 @@
+{
+  "import": "fixture",
+  "about": "An invented import map for the tests: every value is made up, and no screenshot behind it exists.",
+  "capturesFolder": "Videos\\Captures",
+  "note": "Invented for the tests; confirmed against nothing.",
+  "fields": [
+    { "n": 1, "set": [{ "key": "player.prestige" }] },
+    { "n": 2, "set": [{ "key": "player.level", "pattern": "^Level (\\d+)$" }] },
+    { "n": 3, "set": [{ "key": "weapon.cronen-osprey.camos.unlocked" }] },
+    { "n": 4, "skip": "A free-text name: never imported." }
+  ]
+}

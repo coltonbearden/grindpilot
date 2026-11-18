@@ -1,0 +1,26 @@
+# Dependabot proposes dependency updates as pull requests; CI checks each one (docs/spec/07-ai-and-agents.md, B4;
+# 08-app-shape-and-stack.md, 8.7). Nothing is held at an old version without a reason written here and in docs/build.md.
+# The .NET SDK (global.json) is left out: global.json only sets a floor and rolls forward, and a maintainer's SDK is
+# updated with the machine, not by this repo.
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      avalonia:
+        patterns: ["Avalonia*"]
+      xunit:
+        patterns: ["xunit*", "Microsoft.NET.Test.Sdk"]
+    ignore:
+      # Held at 3.x: Avalonia.Headless.XUnit 12.1.6 is built on xunit.v3 3.2.2. Lift this when it moves to 4.x.
+      - dependency-name: "xunit.v3"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "xunit.runner.visualstudio"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

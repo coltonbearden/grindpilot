@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The account store, the catalog and their rules. Pure .NET: nothing here reaches Windows (8.4). -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>GrindPilot.Core</AssemblyName>
+    <RootNamespace>GrindPilot.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="GrindPilot.Core.Tests" />
+  </ItemGroup>
+</Project>

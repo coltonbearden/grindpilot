@@ -1,0 +1,439 @@
+{
+  "kind": "perk",
+  "about": "From P-LOAD's unlock tables, seeded by tools/CatalogSeed.",
+  "seededBy": "tools/CatalogSeed",
+  "entries": [
+    {
+      "name": "Quick Fix",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overkill",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "High Alert",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "8",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ghost",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "24",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Resupply",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "31",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kill Chain",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "48",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 1",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hardline",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Blood Rush",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bomb Squad",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "16",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fast Hands",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "20",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ninja",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "30",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Birdseye",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "40",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 2",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lethal Reach",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Combat Grid",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "4",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Battle Hardened",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "12",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Scavenger",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "28",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tracker",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "32",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cold-Blooded",
+      "sources": [
+        "P-LOAD"
+      ],
+      "facts": {
+        "unlockLevel": [
+          {
+            "value": "36",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ],
+        "row": [
+          {
+            "value": "Perk 3",
+            "sources": [
+              "P-LOAD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "attachment",
+  "about": "Attachments by name. No official post lists them, so they come only from in-game screens confirmed by eye (the S tags in sources.json); more are harvested in stage 5. Each weapon's Apex Attachment is a fact of the weapon (weapons.json).",
+  "entries": [
+    { "name": "ZLR COLD ECHO", "sources": ["S50"], "facts": { "slot": [{ "value": "Muzzle", "sources": ["S50"], "quote": "SELECT MUZZLE" }] } },
+    { "name": "SO PILOT-RX 11\" SHORT BARREL", "sources": ["S73"] }
+  ]
+}
